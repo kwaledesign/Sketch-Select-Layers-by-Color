@@ -1,4 +1,3 @@
 # Select Layers by Color (Sketch Plugin)
 
-This plugin selects all layers that have the same fill color as the currently selected layer/s (command shift c).
-Can be used to combine colors that are visually very similar.
+Forked from the [original select layers plugin](https://github.com/getflourish/Sketch-Select-Layers-by-Color), this plugin selects all layers that have the same fill color as the currently selected layer/s (command shift c), *but only on the currently active artboard*.
