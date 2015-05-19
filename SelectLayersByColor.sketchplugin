@@ -12,25 +12,13 @@ for (var c = 0; c < selection.count(); c++) {
   referenceColors.push(hexColor);
 }
 
-// Loop through all pages, artboards, layers
+// Loop through all layers on currently selected artboard
 
 var count = 1;
-
-for (var i = 0; i < doc.pages().count(); i++) {
-
-  var page = doc.pages().objectAtIndex(i);
-
-  for (var j = 0; j < page.artboards().count(); j++) {
-
-    var artboard = page.artboards().objectAtIndex(j);
-
-    for (var k = 0; k < artboard.layers().count(); k++) {
-
-      var layer = artboard.layers().objectAtIndex(k);
-      parse(layer, 0);
-
-    }
-  }
+var artboard = [[doc currentPage] currentArtboard];
+for (var k = 0; k < artboard.layers().count(); k++) {
+  var layer = artboard.layers().objectAtIndex(k);
+  parse(layer, 0);
 }
 
 // Show how many layers have been selected
